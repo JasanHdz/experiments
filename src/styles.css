@@ -1,0 +1,104 @@
+html, body {
+  background: rgba(16,20,28, 1);
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 20px;
+
+  border: 1px solid rgba(255,255, 240, 0.3);
+}
+
+h4 {
+  margin: 0;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+.form-group {
+  flex-direction: column;
+  display: flex;
+  box-sizing: content-box;
+  margin: 5px 0;
+}
+
+label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input, select {
+  font-size: 16px;
+  padding: 5px 2px;
+  margin: 4px 0;
+  width: 100%;
+  border-width: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 0;
+  border: none;
+  color: white;
+  transition: 0.4s;
+}
+
+.btn:active {
+  transform: scale(.8);
+}
+
+.secondary {
+  padding: 8px 10px;
+  background-color: gray;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.delete {
+  background-color: red;
+}
+
+.primary {
+  background-color: rgb(6, 193, 12);
+}
+
+.primary:active {
+  transform: scale(.95);
+}
+
+#measurements {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+}
+
+
+@media screen and (min-width: 350px) {
+  .buttons {
+    align-self: flex-end;
+  }
+  .secondary {
+    width: auto;
+    margin: 0;
+  }
+  #measurements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  #measurements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

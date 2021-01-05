@@ -7,42 +7,49 @@
   <title>Example</title>
 </head>
 <body>
-  <h1>Dashboard</h1>
-  <form id="form">
-    <div class="form-group">
-      <label for="task">Task</label>
-      <input name="task" id="task" type="text" placeholder="write your task"/>
-    </div>
-    <div class="buttons">
-      <button class="btn secondary" type="button">add measurement</button>
-      <button class="btn secondary delete" type="button">remove last</button>
-    </div>
-    <h4>Measurements</h4>
-    <section id="measurements">
-      <article>
-        <div class="form-group">
-          <label for="value0">Value</label>
-          <input name="value0" id="value0" type="number" value="0.5" />
-        </div>
-        <div class="form-group">
-          <label for="temp0">Temperature</label>
-          <select name="measure0" id="temp0">
-            <option selected disabled>--Measure option--</option>
-            <option>S</option>
-            <option>M</option>
-            <option>KG</option>
-            <option>A</option>
-            <option>C</option>
-            <option>K</option>
-            <option>F</option>
-            <option>MOL</option>
-            <option>CD</option>
-          </select>
-        </div>
-      </article>
-    </section>
-    <button type="submit" class="btn primary">Send</button>
-  </form>
+  <div class="header">
+    <h1>Dashboard</h1>
+    <button id="add-task">Add Task</button>
+  </div>
+  <div class="overlay">
+    <form id="form">
+      <header class="close"></header>
+      <div class="form-group">
+        <label for="task">Task</label>
+        <input name="task" id="task" type="text" placeholder="write your task"/>
+      </div>
+      <div class="buttons">
+        <button class="btn secondary" type="button">add measurement</button>
+        <button class="btn secondary delete" type="button">remove last</button>
+      </div>
+      <h4>Measurements</h4>
+      <section id="measurements">
+        <article>
+          <div class="form-group">
+            <label for="value0">Value</label>
+            <input name="value0" id="value0" type="number" value="0.5" />
+          </div>
+          <div class="form-group">
+            <label for="temp0">Temperature</label>
+            <select name="measure0" id="temp0">
+              <option selected disabled>--Measure option--</option>
+              <option>S</option>
+              <option>M</option>
+              <option>KG</option>
+              <option>A</option>
+              <option>C</option>
+              <option>K</option>
+              <option>F</option>
+              <option>MOL</option>
+              <option>CD</option>
+            </select>
+          </div>
+        </article>
+      </section>
+      <button type="submit" class="btn primary">Send</button>
+    </form>
+  </div>
+  <section id="table" class="container-task"></section>
   <script type="module" src="app.js"></script>
 </body>
 </html>

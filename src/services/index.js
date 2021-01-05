@@ -16,3 +16,9 @@ export async function createExperiment(payload) {
     body: JSON.stringify(payload)
   })
 }
+
+export async function DeleteExperimentById(id) {
+  return fetch(`${BASE_URL}/experiment/${id}`, {
+    method: 'DELETE',
+  })
+}
